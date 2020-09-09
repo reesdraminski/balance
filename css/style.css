@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+#tryAgainButton {
+    margin-top: .25em;
+}
+
+#timeMessage {
+    margin-top: .5em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background: white;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+progress {
+    appearance: none;
+
+    width: 100%;
+
+    margin-bottom: .5em;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: white;
+    border: 1px solid black;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: black;
+}
