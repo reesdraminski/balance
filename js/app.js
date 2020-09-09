@@ -49,6 +49,12 @@ function startGame() {
 function setupButtons() {
     topClickIncrement    = getRandomNumber(1, 8);
     bottomClickIncrement = getRandomNumber(1, 8);
+    
+    // ensure that the click increments aren't the same to make the game a bit harder
+    while (topClickIncrement == bottomClickIncrement)
+    {
+        bottomClickIncrement = getRandomNumber(1, 8);
+    }
 
     topButton.onclick = () => {
         if (!gameOver) {
@@ -76,6 +82,12 @@ function setupBars() {
 
     topBurndown    = getRandomNumber(1, 8);
     bottomBurndown = getRandomNumber(1, 8);
+    
+    // ensure difference to make game more challenging
+    while (topBurndown == bottomBurndown)
+    {
+        bottomBurndown = getRandomNumber(1, 8);
+    }
 
     topBarAnimation = setInterval(() => {
         // decrement the top bar value but keep it from going negative
